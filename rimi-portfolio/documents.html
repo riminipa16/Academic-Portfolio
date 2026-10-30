@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents | Most Rimi Moni</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="documents" class="text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="blob w-72 h-72 bg-indigo-600 -top-20 -left-10" style="opacity:.25"></div>
+    <div class="absolute inset-0 bg-grid opacity-60"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-14">
+      <p class="reveal text-xs text-slate-500"><a href="index.html" class="hover:text-indigo-400">Home</a> / Documents</p>
+      <h1 class="reveal font-display text-4xl md:text-5xl font-semibold text-white mt-3" style="--d:.05s">Documents &amp; Gallery</h1>
+      <p class="reveal text-slate-400 mt-3 max-w-xl" style="--d:.1s">CV, certificates, transcripts, papers and photos.</p>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-6 py-14 space-y-12">
+
+    <!-- PDFs -->
+    <section class="space-y-5">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-file-pdf text-rose-400"></i> PDF Documents</h2>
+        <div id="pdf-filters" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div id="pdf-grid" class="grid sm:grid-cols-2 gap-5"></div>
+    </section>
+
+    <!-- Images -->
+    <section class="space-y-5">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-images text-cyan-400"></i> Image Gallery</h2>
+      <div id="image-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+    </section>
+
+    <div class="flex justify-between pt-4 text-sm">
+      <a href="experience.html" class="text-slate-400 hover:text-indigo-400 transition"><i class="fas fa-arrow-left mr-1"></i> Experience</a>
+      <a href="contact.html" class="text-indigo-400 hover:text-indigo-300 transition">Contact <i class="fas fa-arrow-right ml-1"></i></a>
+    </div>
+  </main>
+
+  <!-- PDF viewer modal -->
+  <div id="pdf-modal" class="hidden fixed inset-0 z-[60] bg-black/80 p-4 md:p-8 flex-col">
+    <div class="flex items-center justify-between mb-3 text-white">
+      <h3 id="pdf-modal-title" class="font-semibold truncate pr-4"></h3>
+      <div class="flex items-center gap-2 shrink-0">
+        <a id="pdf-modal-download" download class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-sm font-medium"><i class="fas fa-download mr-1"></i> Download</a>
+        <button id="pdf-modal-close" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-medium" aria-label="Close"><i class="fas fa-xmark"></i></button>
+      </div>
+    </div>
+    <iframe id="pdf-frame" class="flex-1 w-full rounded-lg bg-white" title="PDF viewer"></iframe>
+  </div>
+
+  <!-- Image lightbox -->
+  <div id="img-modal" class="hidden fixed inset-0 z-[60] bg-black/90 p-4 items-center justify-center">
+    <button id="img-close" class="absolute top-4 right-4 text-white text-2xl px-3 py-1" aria-label="Close"><i class="fas fa-xmark"></i></button>
+    <button id="img-prev" class="absolute left-3 top-1/2 -translate-y-1/2 text-white text-2xl px-3 py-2" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button id="img-next" class="absolute right-3 top-1/2 -translate-y-1/2 text-white text-2xl px-3 py-2" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <figure class="max-w-4xl max-h-full text-center">
+      <img id="img-big" class="max-h-[80vh] mx-auto rounded-lg" alt="">
+      <figcaption id="img-caption" class="text-slate-300 text-sm mt-3"></figcaption>
+    </figure>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/documents-data.js"></script>
+  <script src="assets/extra-data.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+    // ---------- PDFs ----------
+    const pdfGrid = document.getElementById("pdf-grid");
+    const filterBox = document.getElementById("pdf-filters");
+    let activeCat = "All";
+
+    function renderPdfs() {
+      const list = PDFS.filter((p) => activeCat === "All" || p.category === activeCat);
+      if (!PDFS.length) {
+        pdfGrid.innerHTML = `<div class="sm:col-span-2 border border-dashed border-slate-700 rounded-2xl p-8 text-center text-sm text-slate-400">
+          <i class="fas fa-file-circle-plus text-2xl text-slate-500 mb-2"></i>
+          <p>No PDFs added yet.</p>
+          <p class="mt-1">Put PDFs in <code class="text-indigo-400">files/pdfs/</code> and list them in <code class="text-indigo-400">assets/documents-data.js</code>.</p></div>`;
+        return;
+      }
+      pdfGrid.innerHTML = list.map((p, i) => `
+        <div class="card spot reveal p-5 flex flex-col gap-3" style="--d:${(i%2)*0.1}s">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-file-pdf text-rose-400 text-2xl mt-0.5"></i>
+            <div class="min-w-0">
+              <h3 class="font-semibold text-white">${esc(p.title)}</h3>
+              <p class="text-xs text-indigo-400">${esc(p.category || "Document")}</p>
+              ${p.note ? `<p class="text-xs text-slate-400 mt-1">${esc(p.note)}</p>` : ""}
+            </div>
+          </div>
+          <div class="flex gap-2 pt-1">
+            <button data-view="${i}" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition"><i class="fas fa-eye mr-1"></i> View</button>
+            <a href="${esc(p.file)}" download class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 transition"><i class="fas fa-download mr-1"></i> Download</a>
+          </div>
+        </div>`).join("");
+      window.revealScan && window.revealScan();
+      pdfGrid.querySelectorAll("[data-view]").forEach((b) =>
+        b.addEventListener("click", () => openPdf(list[+b.dataset.view])));
+    }
+
+    function renderFilters() {
+      const cats = ["All", ...new Set(PDFS.map((p) => p.category).filter(Boolean))];
+      if (cats.length < 3) { filterBox.innerHTML = ""; return; }
+      filterBox.innerHTML = cats.map((c) => {
+        const on = c === activeCat;
+        return `<button data-cat="${esc(c)}" class="text-xs font-semibold px-3 py-1.5 rounded-full border transition ${on ? "bg-indigo-600 border-indigo-500 text-white" : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700"}">${esc(c)}</button>`;
+      }).join("");
+      filterBox.querySelectorAll("[data-cat]").forEach((b) =>
+        b.addEventListener("click", () => { activeCat = b.dataset.cat; renderFilters(); renderPdfs(); }));
+    }
+
+    const pdfModal = document.getElementById("pdf-modal");
+    function openPdf(p) {
+      document.getElementById("pdf-modal-title").textContent = p.title;
+      document.getElementById("pdf-modal-download").href = p.file;
+      document.getElementById("pdf-frame").src = p.file;
+      pdfModal.classList.remove("hidden"); pdfModal.classList.add("flex");
+    }
+    function closePdf() {
+      pdfModal.classList.add("hidden"); pdfModal.classList.remove("flex");
+      document.getElementById("pdf-frame").src = "about:blank";
+    }
+    document.getElementById("pdf-modal-close").addEventListener("click", closePdf);
+
+    // ---------- Images ----------
+    const imageGrid = document.getElementById("image-grid");
+    const imgModal = document.getElementById("img-modal");
+    let imgIndex = 0;
+
+    function renderImages() {
+      if (!IMAGES.length) {
+        imageGrid.innerHTML = `<div class="col-span-full border border-dashed border-slate-700 rounded-2xl p-8 text-center text-sm text-slate-400">
+          <i class="fas fa-image text-2xl text-slate-500 mb-2"></i>
+          <p>No images added yet.</p>
+          <p class="mt-1">Put images in <code class="text-indigo-400">files/images/</code> and list them in <code class="text-indigo-400">assets/documents-data.js</code>.</p></div>`;
+        return;
+      }
+      imageGrid.innerHTML = IMAGES.map((im, i) => `
+        <button data-img="${i}" class="reveal group relative aspect-square overflow-hidden rounded-xl border border-slate-800 bg-slate-950">
+          <img src="${esc(im.file)}" alt="${esc(im.title)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent text-left text-xs text-white p-2">${esc(im.title)}</span>
+        </button>`).join("");
+      window.revealScan && window.revealScan();
+      imageGrid.querySelectorAll("[data-img]").forEach((b) =>
+        b.addEventListener("click", () => showImg(+b.dataset.img)));
+    }
+
+    function showImg(i) {
+      imgIndex = (i + IMAGES.length) % IMAGES.length;
+      const im = IMAGES[imgIndex];
+      document.getElementById("img-big").src = im.file;
+      document.getElementById("img-big").alt = im.title;
+      document.getElementById("img-caption").textContent = [im.title, im.caption].filter(Boolean).join(" – ");
+      imgModal.classList.remove("hidden"); imgModal.classList.add("flex");
+    }
+    function closeImg() { imgModal.classList.add("hidden"); imgModal.classList.remove("flex"); }
+    document.getElementById("img-close").addEventListener("click", closeImg);
+    document.getElementById("img-prev").addEventListener("click", () => showImg(imgIndex - 1));
+    document.getElementById("img-next").addEventListener("click", () => showImg(imgIndex + 1));
+    imgModal.addEventListener("click", (e) => { if (e.target === imgModal) closeImg(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closePdf(); closeImg(); }
+      if (!imgModal.classList.contains("hidden")) {
+        if (e.key === "ArrowLeft") showImg(imgIndex - 1);
+        if (e.key === "ArrowRight") showImg(imgIndex + 1);
+      }
+    });
+
+    renderFilters(); renderPdfs(); renderImages();
+  </script>
+</body>
+</html>
