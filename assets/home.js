@@ -2,29 +2,8 @@
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ---------- Typing effect ----------
-  const roles = [
-    "Machine Learning Researcher",
-    "Explainable AI Enthusiast",
-    "Predictive Modeling Practitioner",
-    "Future Erasmus Mundus Scholar",
-  ];
-  const typed = document.getElementById("typed");
-  if (typed) {
-    if (reduce) { typed.textContent = roles[0]; }
-    else {
-      let r = 0, c = 0, deleting = false;
-      (function tick() {
-        const word = roles[r];
-        typed.textContent = word.slice(0, c);
-        let delay = deleting ? 35 : 75;
-        if (!deleting && c === word.length) { deleting = true; delay = 1600; }
-        else if (deleting && c === 0) { deleting = false; r = (r + 1) % roles.length; delay = 350; }
-        c += deleting ? -1 : 1;
-        setTimeout(tick, delay);
-      })();
-    }
-  }
+
+
 
   // ---------- Particle network in the hero ----------
   const canvas = document.getElementById("net");
