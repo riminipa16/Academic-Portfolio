@@ -1,13 +1,13 @@
 // ============================================================
 //  DOCUMENTS LIST: edit this file to add your PDFs and images.
 //
-//  1. Copy your PDF into   files/pdfs/
+//  1. Copy your PDF into     files/pdfs/
 //     Copy your image into files/images/
 //  2. Add one line for it below (copy an example line and change it).
 //  3. Save and refresh documents.html
 //
-//  category (PDFs only): "CV", "Certificate", "Transcript", "Paper", "Other"
-//  Keep file names simple: no spaces (use dashes), e.g. my-cv.pdf
+//  category (PDFs only): "CV", "Certificate", "Transcript", "Paper", "Other"[cite: 13]
+//  Keep file names simple: no spaces (use dashes), e.g. my-cv.pdf[cite: 10, 13]
 // ============================================================
 
 const PDFS = [
@@ -18,7 +18,6 @@ const PDFS = [
 ];
 
 const IMAGES = [
-  const IMAGES = [
   { title: "Annual Sports First Place Trophy", file: "files/images/IMG-20261031-WA0004.jpg", caption: "Annual Sports '14-'15, Dinajpur School of Liberators" },
   { title: "Annual Sports Third Place Trophy", file: "files/images/IMG-20261031-WA0003.jpg", caption: "Annual Sports '14-'15, Dinajpur School of Liberators" },
   { title: "Math Festival Crest", file: "files/images/IMG-20261031-WA0001.jpg", caption: "Dinajpur Science Academy" },
@@ -30,5 +29,4 @@ const IMAGES = [
   { title: "Programming Contest Certificate", file: "files/images/CamScanner 21-10-2026 13.58.jpg", caption: "8th Place at KOPC Spring'22, Canadian University of Bangladesh" },
   { title: "Annual Sports Gold Medal", file: "files/images/_storage_emulated_0_Android_media_com.whatsapp_WhatsApp_Media_WhatsApp Images_IMG-20261031-WA0007.jpg", caption: "Annual Sports-2017, Dinajpur School of Liberators" },
   { title: "LIBMUN '18 Recognition Crest", file: "files/images/_storage_emulated_0_Android_media_com.whatsapp_WhatsApp_Media_WhatsApp Images_IMG-20261031-WA0006.jpg", caption: "Director of Conference Management, LIBMUN 18" }
-];
 ];
