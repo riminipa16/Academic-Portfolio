@@ -11,14 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="awards" class="text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+<body data-page="awards" class="text-slate-100 antialiased selection:bg-rose-500 selection:text-white">
   <div id="site-header"></div>
 
   <section class="page-hero">
-    <div class="blob w-72 h-72 bg-indigo-600 -top-20 -left-10" style="opacity:.25"></div>
+    <div class="blob w-72 h-72 bg-rose-600 -top-20 -left-10" style="opacity:.25"></div>
     <div class="absolute inset-0 bg-grid opacity-60"></div>
     <div class="relative max-w-5xl mx-auto px-6 py-14">
-      <p class="reveal text-xs text-slate-500"><a href="index.html" class="hover:text-indigo-400">Home</a> / Awards</p>
+      <p class="reveal text-xs text-slate-500"><a href="index.html" class="hover:text-rose-400">Home</a> / Awards</p>
       <h1 class="reveal font-display text-4xl md:text-5xl font-semibold text-white mt-3" style="--d:.05s">Awards &amp; Honors</h1>
       <p class="reveal text-slate-400 mt-3 max-w-xl" style="--d:.1s">Recognition from programming contests and mathematics competitions.</p>
     </div>
@@ -27,8 +27,8 @@
   <main class="max-w-5xl mx-auto px-6 py-14 space-y-8">
     <div id="award-grid" class="grid md:grid-cols-2 gap-6"></div>
     <div class="flex justify-between pt-6 text-sm">
-      <a href="experience.html" class="text-slate-400 hover:text-indigo-400 transition"><i class="fas fa-arrow-left mr-1"></i> Experience</a>
-      <a href="documents.html" class="text-indigo-400 hover:text-indigo-300 transition">Documents <i class="fas fa-arrow-right ml-1"></i></a>
+      <a href="experience.html" class="text-slate-400 hover:text-rose-400 transition"><i class="fas fa-arrow-left mr-1"></i> Experience</a>
+      <a href="documents.html" class="text-rose-400 hover:text-rose-300 transition">Documents <i class="fas fa-arrow-right ml-1"></i></a>
     </div>
   </main>
 
@@ -43,7 +43,7 @@
         <div>
           <span class="chip mb-2">${esc(a.date)}</span>
           <h2 class="font-display text-xl font-semibold text-white">${esc(a.title)}</h2>
-          <p class="text-indigo-300 text-sm mt-1">${esc(a.event)}</p>
+          <p class="text-rose-300 text-sm mt-1">${esc(a.event)}</p>
           ${a.org ? `<p class="text-xs text-slate-500 mt-0.5">${esc(a.org)}</p>` : ""}
           ${a.text ? `<p class="text-sm text-slate-400 mt-3 leading-relaxed">${esc(a.text)}</p>` : ""}
         </div>
