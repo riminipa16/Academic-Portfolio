@@ -15,9 +15,9 @@ const PDFS = [
   { title: "Europass CV",                  file: "files/pdfs/europass-cv.pdf",     category: "CV",          note: "Standardized format" },
   { title: "B.Sc. Undergraduate Transcript",file: "files/pdfs/bsc-transcript.pdf",  category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
   { title: "B.Sc. Degree Certificate",     file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
-  { title: "GCE O-Level Certificate",      file: "files/pdfs/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
-  { title: "GED Certificate",              file: "files/pdfs/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
-  { title: "Online Course Certifications", file: "files/pdfs/online-courses.pdf",  category: "Certificate", note: "Specialized training & coursework" },
+  { title: "GCE O-Level Certificate",      file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
+  { title: "GED Certificate",              file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
+  { title: "Online Course Certifications", file: "files/images/ged-transcript.pdf",  category: "Transcript", note: "GED Testing Service, USA" },
 ];
 
 const IMAGES = [
