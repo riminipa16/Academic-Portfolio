@@ -27,9 +27,10 @@ const IMAGES = [
   { title: "Annual Sports First Place Trophy", file: "files/images/img1.jpg", caption: "Annual Sports '14-'15, Dinajpur School of Liberators" },
   { title: "Annual Sports Third Place Trophy", file: "files/images/img2.jpg", caption: "Annual Sports '14-'15, Dinajpur School of Liberators" },
   { title: "Math Festival Crest", file: "files/images/img3.jpg", caption: "Dinajpur Science Academy" },
-  { title: "Debate Competition Group Photo", file: "files/images/img5.jpg", caption: "Dinajpur School of Liberators" },
-  { title: "Victory Day Award Ceremony", file: "files/images/img6.jpg", caption: "Award Presentation" },
+ 
   { title: "Biology Olympiad Certificate", file: "files/images/img7.jpg", caption: "National Museum of Science & Technology Biology Olympiad 2018" },
   { title: "Annual Sports Gold Medal", file: "files/images/img10.jpg", caption: "Annual Sports-2017, Dinajpur School of Liberators" },
+  { title: "Debate Competition Group Photo", file: "files/images/img5.jpg", caption: "Dinajpur School of Liberators" },
+  { title: "Victory Day Award Ceremony", file: "files/images/img6.jpg", caption: "Award Presentation" },
   { title: "LIBMUN '18 Recognition Crest", file: "files/images/img11.jpg", caption: "Director of Conference Management, LIBMUN 18" }
 ];
