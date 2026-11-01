@@ -11,7 +11,7 @@
 // ============================================================
 
 const PDFS = [
-  { title: "Academic Curriculum Vitae",      file: "files/pdfs/academic-cv.pdf",     category: "CV",          note: "Updated 2026" },
+  { title: "Academic Curriculum Vitae",      file: "files/images/academic-cv.pdf",     category: "CV",          note: "Updated 2026" },
   { title: "Europass CV",                  file: "files/pdfs/europass-cv.pdf",     category: "CV",          note: "Standardized format" },
   { title: "B.Sc. Undergraduate Transcript",file: "files/pdfs/bsc-transcript.pdf",  category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
   { title: "B.Sc. Degree Certificate",     file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
