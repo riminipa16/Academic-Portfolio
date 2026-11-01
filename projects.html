@@ -11,60 +11,203 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="projects" class="text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+<body data-page="projects" class="text-slate-100 antialiased selection:bg-rose-500 selection:text-white">
   <div id="site-header"></div>
 
   <section class="page-hero">
-    <div class="blob w-72 h-72 bg-indigo-600 -top-20 -left-10" style="opacity:.25"></div>
+    <div class="blob w-72 h-72 bg-rose-600 -top-20 -left-10" style="opacity:.25"></div>
     <div class="absolute inset-0 bg-grid opacity-60"></div>
     <div class="relative max-w-5xl mx-auto px-6 py-14">
-      <p class="reveal text-xs text-slate-500"><a href="index.html" class="hover:text-indigo-400">Home</a> / Projects</p>
+      <p class="reveal text-xs text-slate-500"><a href="index.html" class="hover:text-rose-400">Home</a> / Projects</p>
       <h1 class="reveal font-display text-4xl md:text-5xl font-semibold text-white mt-3" style="--d:.05s">Technical Projects</h1>
-      <p class="reveal text-slate-400 mt-3 max-w-xl" style="--d:.1s">Machine learning, computer vision and time series work.</p>
+      <p class="reveal text-slate-400 mt-3 max-w-xl" style="--d:.1s">Machine learning pipelines, predictive modeling, NLP, and computer vision systems.</p>
     </div>
   </section>
 
-  <main class="max-w-5xl mx-auto px-6 py-14 space-y-8">
-    <div class="grid md:grid-cols-2 gap-6">
-      <article class="card spot reveal p-7 flex flex-col justify-between">
-        <div>
-          <div class="icon-badge mb-5"><i class="fas fa-chart-line"></i></div>
-          <h2 class="font-display text-xl font-semibold text-white mb-3">Advanced Predictive Modeling Portfolio</h2>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            A suite of ML models including a <strong class="text-white">Credit Scoring Model</strong> (supervised pipeline for consumer credit default risk) and <strong class="text-white">Heart Disease &amp; Diabetes Prediction</strong> classifiers using SVM and ensemble techniques.
-          </p>
-        </div>
-        <div class="pt-5 mt-5 border-t border-slate-800 flex flex-wrap gap-2">
-          <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span>
-        </div>
-      </article>
+  <main class="max-w-5xl mx-auto px-6 py-14 space-y-12">
+    
+    <!-- CATEGORY 1: PREDICTIVE MODELING & HEALTH -->
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-chart-line text-rose-400"></i> Predictive Modeling &amp; Analytics</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <!-- Credit Scoring -->
+        <article class="card spot reveal p-7 flex flex-col justify-between">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-credit-card"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Credit Scoring Model</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Credit scoring model created using machine learning and Python to evaluate credit risk and borrower default probability.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Jupyter Notebook</span>
+            </div>
+            <a href="https://github.com/riminipa16/CodeAlpha_Credit_Scoring_Model" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
 
-      <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.1s">
-        <div>
-          <div class="icon-badge mb-5"><i class="fas fa-eye"></i></div>
-          <h2 class="font-display text-xl font-semibold text-white mb-3">Computer Vision &amp; Specialized Analytics</h2>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            A deep neural network for <strong class="text-white">Handwritten Character Recognition</strong> with image preprocessing, plus <strong class="text-white">Stock Market Analysis</strong> using time series methods and rolling window indicators.
-          </p>
-        </div>
-        <div class="pt-5 mt-5 border-t border-slate-800 flex flex-wrap gap-2">
-          <span class="chip">Jupyter</span><span class="chip">XGBoost</span><span class="chip">NumPy</span><span class="chip">Pandas</span>
-        </div>
-      </article>
+        <!-- Heart Disease Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.05s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-heart-pulse"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Heart Disease Prediction</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Classification model designed to detect heart disease risks based on diagnostic measurements and clinical patient indicators.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">Jupyter Notebook</span>
+            </div>
+            <a href="https://github.com/riminipa16/CodeAlpha_Heart_disease_Prediction" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Diabetes Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.1s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-stethoscope"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Diabetes Prediction (SVM)</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Machine learning project utilizing Support Vector Machines (SVM) on the PIMA Diabetes Dataset for accurate health outcome classification.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">SVM</span><span class="chip">Scikit-learn</span>
+            </div>
+            <a href="https://github.com/riminipa16/-Diabetes-Prediction-using-Machine-Learning-with-Python" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Loan Status Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.15s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-landmark"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Loan Status Prediction</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Predictive classification model to determine loan approval status based on applicant demographics, income, and credit background data.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span>
+            </div>
+            <a href="https://github.com/riminipa16/Loan_Status_Prediction" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
     </div>
 
-    <a href="https://github.com/riminipa16" target="_blank" rel="noopener" class="reveal inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition">
-      <i class="fab fa-github"></i> See the code on GitHub
-    </a>
+    <!-- CATEGORY 2: REGRESSION & PRICING -->
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-calculator text-rose-400"></i> Regression &amp; Market Analysis</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <!-- Car Price Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-car"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Car Price Prediction</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Predicting used car prices using Linear and Lasso Regression with comprehensive exploratory analysis, data visualization, and pipeline evaluation.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Linear Regression</span><span class="chip">Lasso</span><span class="chip">Seaborn</span><span class="chip">Pandas</span>
+            </div>
+            <a href="https://github.com/riminipa16/Car_Price_Prediction" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
 
-    <div class="flex justify-between pt-6 text-sm">
-      <a href="research.html" class="text-slate-400 hover:text-indigo-400 transition"><i class="fas fa-arrow-left mr-1"></i> Research</a>
-      <a href="experience.html" class="text-indigo-400 hover:text-indigo-300 transition">Experience <i class="fas fa-arrow-right ml-1"></i></a>
+        <!-- House Price Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.05s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-house"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">House Price Prediction</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Boston housing price estimation using XGBoost regression. Explores feature correlations and evaluates performance metrics like R² and MAE.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">XGBoost</span><span class="chip">Python</span><span class="chip">StatLib Dataset</span>
+            </div>
+            <a href="https://github.com/riminipa16/House-Price-Prediction" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Wine Quality Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.1s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-wine-glass"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Wine Quality Prediction</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Predicting wine quality ratings based on physicochemical laboratory properties using structured classification workflows in Scikit-learn.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Jupyter</span>
+            </div>
+            <a href="https://github.com/riminipa16/Wine_Quality_Prediction" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
     </div>
-  </main>
 
-  <div id="site-footer"></div>
-  <script src="assets/extra-data.js"></script>
-  <script src="assets/site.js"></script>
-</body>
-</html>
+    <!-- CATEGORY 3: NLP, VISION & SPECIALIZED SYSTEMS -->
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-brain text-rose-400"></i> NLP, Vision &amp; Advanced Systems</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <!-- Spam Email Detection -->
+        <article class="card spot reveal p-7 flex flex-col justify-between">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-envelope-circle-check"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Spam Email Detection</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Natural language processing pipeline designed to classify and filter out spam messages from legitimate email communications.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">Scikit-learn</span>
+            </div>
+            <a href="https://github.com/riminipa16/Spam_email_detection" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-400 hover:text-rose-300 transition">
+              <i class="fab fa-github"></i> View Repository <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Fake News Prediction -->
+        <article class="card spot reveal p-7 flex flex-col justify-between" style="--d:.05s">
+          <div>
+            <div class="icon-badge mb-5"><i class="fas fa-newspaper"></i></div>
+            <h3 class="font-display text-xl font-semibold text-white mb-3">Fake News Detection</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              NLP text classification pipeline using Python, NLTK, TF-IDF vectorization, and Logistic Regression for automated article authenticity verification.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-slate-800 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">NLT
