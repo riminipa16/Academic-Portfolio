@@ -17,7 +17,7 @@ const PDFS = [
   { title: "B.Sc. Degree Certificate",     file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
   { title: "GCE O-Level Certificate",      file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
   { title: "GED Certificate",              file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
-  { title: "Online Course Certifications", file: "files/images/ged-transcript.pdf",  category: "Transcript", note: "GED Testing Service, USA" },
+  { title: "GED Transcript", file: "files/images/ged-transcript.pdf",  category: "Transcript", note: "GED Testing Service, USA" },
 ];
 
 const IMAGES = [
