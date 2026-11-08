@@ -12,12 +12,12 @@
 
 const PDFS = [
   { title: "Academic Curriculum Vitae",      file: "files/images/academic-cv.pdf",     category: "CV",          note: "Updated 2026" },
-  { title: "Europass CV",                  file: "files/pdfs/europass-cv.pdf",     category: "CV",          note: "Standardized format" },
-  { title: "B.Sc. Undergraduate Transcript",file: "files/pdfs/bsc-transcript.pdf",  category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
-  { title: "B.Sc. Degree Certificate",     file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
-  { title: "GCE O-Level Certificate",      file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
-  { title: "GED Certificate",              file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
-  { title: "GED Transcript",               file: "files/images/ged-transcript.pdf",  category: "Transcript",  note: "GED Testing Service, USA" },
+  { title: "Europass CV",                    file: "files/pdfs/europass-cv.pdf",     category: "CV",          note: "Standardized format" },
+  { title: "B.Sc. Undergraduate Transcript", file: "files/pdfs/bsc-transcript.pdf",  category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
+  { title: "B.Sc. Degree Certificate",       file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
+  { title: "GCE O-Level Certificate",        file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
+  { title: "GED Certificate",                file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
+  { title: "GED Transcript",                 file: "files/images/ged-transcript.pdf",  category: "Transcript",  note: "GED Testing Service, USA" },
 ];
 
 const IMAGES = [
