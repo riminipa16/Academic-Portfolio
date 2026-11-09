@@ -1,17 +1,17 @@
 // Shared header, footer and small effects for every page.
 // Needs assets/extra-data.js to be loaded first.
 const PAGES = [
-  { id: "home",           label: "Home",           href: "index.html" },
-  { id: "about",          label: "About",          href: "about.html" },
-  { id: "education",      label: "Education",      href: "education.html" },
-  { id: "research",       label: "Research",       href: "research.html" },
-  { id: "projects",       label: "Projects",       href: "projects.html" },
-  { id: "experience",     label: "Experience",     href: "experience.html" },
-  { id: "awards",         label: "Awards",         href: "awards.html",         more: true, when: () => typeof AWARDS !== "undefined" && AWARDS.length },
+  { id: "home",            label: "Home",            href: "index.html" },
+  { id: "about",           label: "About",           href: "about.html" },
+  { id: "education",       label: "Education",       href: "education.html" },
+  { id: "research",        label: "Research",        href: "research.html" },
+  { id: "projects",        label: "Projects",        href: "projects.html" },
+  { id: "experience",      label: "Experience",      href: "experience.html" },
+  { id: "documents",       label: "Documents",       href: "documents.html" },       // <-- Moved to main nav!
+  { id: "awards",          label: "Awards",          href: "awards.html",          more: true, when: () => typeof AWARDS !== "undefined" && AWARDS.length },
   { id: "certifications", label: "Certifications", href: "certifications.html", more: true, when: () => typeof CERTIFICATIONS !== "undefined" && CERTIFICATIONS.length },
-  { id: "volunteering",   label: "Volunteering",   href: "volunteering.html",   more: true, when: () => typeof VOLUNTEERING !== "undefined" && VOLUNTEERING.length },
-  { id: "documents",      label: "Documents",      href: "documents.html",      more: true },
-  { id: "contact",        label: "Contact",        href: "contact.html" },
+  { id: "volunteering",    label: "Volunteering",    href: "volunteering.html",    more: true, when: () => typeof VOLUNTEERING !== "undefined" && VOLUNTEERING.length },
+  { id: "contact",         label: "Contact",         href: "contact.html",         more: true }, // <-- Moved into More dropdown!
 ];
 
 (function () {
