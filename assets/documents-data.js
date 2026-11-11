@@ -11,19 +11,23 @@
 // ============================================================
 
 const PDFS = [
-  { title: "Academic Curriculum Vitae",      file: "files/images/academic-cv.pdf",     category: "CV",          note: "Updated 2026" },
-  { title: "Europass CV",                    file: "files/pdfs/europass-cv.pdf",     category: "CV",          note: "Standardized format" },
-  { title: "B.Sc. Degree Certificate",       file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
-  { title: "B.Sc. Undergraduate Thesis",     file: "files/images/thesis.pdf",          category: "Paper",      note: "Final Year Thesis" },
-  { title: "B.Sc. Undergraduate Transcript", file: "files/pdfs/bsc-transcript.pdf",  category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
-  { title: "GCE O-Level Certificate",        file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
-  { title: "GED Certificate",                file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
-  { title: "GED Transcript",                 file: "files/images/ged-transcript.pdf",  category: "Transcript",  note: "GED Testing Service, USA" },
+  { title: "Academic Curriculum Vitae",       file: "files/images/academic-cv.pdf",     category: "CV",         note: "Updated 2026" },
+  { title: "Europass CV",                     file: "files/pdfs/europass-cv.pdf",     category: "CV",         note: "Standardized format" },
+  { title: "B.Sc. Degree Certificate",        file: "files/pdfs/bsc-certificate.pdf", category: "Certificate", note: "Canadian University of Bangladesh" },
+  { title: "B.Sc. Undergraduate Thesis",      file: "files/images/thesis.pdf",          category: "Paper",      note: "Final Year Thesis" },
+  { title: "B.Sc. Undergraduate Transcript", file: "files/pdfs/bsc-transcript.pdf",   category: "Transcript",  note: "CUB, CGPA 3.73 / 4.00" },
+  { title: "GCE O-Level Certificate",         file: "files/images/olevel-certificate.pdf", category: "Certificate", note: "EQF Level 3" },
+  { title: "GED Certificate",                 file: "files/images/ged-certificate.pdf", category: "Certificate", note: "GED Testing Service, USA" },
+  { title: "GED Transcript",                  file: "files/images/ged-transcript.pdf",   category: "Transcript",  note: "GED Testing Service, USA" },
 ];
 
 const IMAGES = [
   { title: "Saylor Academy - Python for Data Science (Certificate)", file: "files/images/2003293823MM (1)_page-0001.jpg", caption: "CS250: Python for Data Science, Saylor University (Oct 2026)" },
   { title: "Saylor Academy - Python for Data Science (Grade Details)", file: "files/images/2003293823MM (1)_page-0002.jpg", caption: "Grade & Course Units: CS250 Python for Data Science (85.02%)" },
+  { title: "Saylor Academy - Building with Artificial Intelligence (Certificate)", file: "files/images/4128473272MM_page-0001.jpg", caption: "CS205: Building with Artificial Intelligence, Saylor University (Nov 2026)" },
+  { title: "Saylor Academy - Building with Artificial Intelligence (Grade Details)", file: "files/images/4128473272MM_page-0002.jpg", caption: "Grade & Course Units: CS205 Building with Artificial Intelligence (80.39%)" },
+  { title: "Saylor Academy - Fundamentals of Machine Learning (Certificate)", file: "files/images/4220402071MM_page-0001.jpg", caption: "CS207: Fundamentals of Machine Learning, Saylor University (Nov 2026)" },
+  { title: "Saylor Academy - Fundamentals of Machine Learning (Grade Details)", file: "files/images/4220402071MM_page-0002.jpg", caption: "Grade & Course Units: CS207 Fundamentals of Machine Learning (90.00%)" },
   { title: "Elsevier Researcher Academy - Writing an Abstract", file: "files/images/write-abstract-improve-article-certificate_page-0001.jpg", caption: "How to write an abstract and improve your article, Elsevier (Oct 2026)" },
   { title: "Elsevier Researcher Academy - Structuring Your Article", file: "files/images/structuring-article-correctly-certificate_page-0001.jpg", caption: "Structuring your article correctly, Elsevier (Oct 2026)" },
   { title: "Award Certificate", file: "files/images/img8.jpg", caption: "1st Runner-Up Position, Canadian University of Bangladesh, Summer 2022" },
